@@ -1,5 +1,5 @@
 # backend-nest-prisma-postgres
-Modelo Backend em Next com Prisma e Postgres
+Modelo Backend em NestJS com Prisma e Postgres
 
 Escolher o pacote de sua preferencia.
 
