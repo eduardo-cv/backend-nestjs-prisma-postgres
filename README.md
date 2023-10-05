@@ -12,3 +12,8 @@ yarn
 ou
 
 pnpm install
+
+
+criar um arquivo  .env
+
+DATABASE_URL="postgresql://postgres:password@localhost:5432/meudb?schema=public"
