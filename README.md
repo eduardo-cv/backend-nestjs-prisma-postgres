@@ -19,10 +19,12 @@ criar um arquivo  .env
 DATABASE_URL="postgresql://postgres:password@localhost:5432/meudb?schema=public"
 
 
-Uma das formas de gerar o schema automáticamente é usar os seguintes comandos.
+- Uma das formas de gerar o schema automáticamente é usar os seguintes comandos.
+- Obs isso quando ja temos o DB
 
-'''
+
 prisma introspect
 
 prisma generate
-'''
+
+
