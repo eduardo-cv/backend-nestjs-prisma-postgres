@@ -6,3 +6,24 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model usuarios {
+  user_id           String    @id(map: "pk_users") @default(dbgenerated("uuid_generate_v4()")) @db.VarChar(36)
+  email_user        String    @unique @db.VarChar(255)
+  password_user     String    @db.VarChar(1024)
+  descricao_user    String    @db.VarChar(36)
+  nivel_id          String?   @db.VarChar(36)
+  ativo             Boolean   @default(true)
+  bloqueado         Boolean   @default(false)
+  on_line           Boolean   @default(false)
+  replicar          Boolean   @default(false)
+  log_data_rep      DateTime? @db.Timestamptz(6)
+  log_data_cad      DateTime  @default(now()) @db.Timestamptz(6)
+  log_user_cad      String?   @db.VarChar(36)
+  log_data_alt      DateTime? @db.Timestamptz(6)
+  log_user_alt      String?   @db.VarChar(36)
+  term_cad          String?   @db.VarChar(36)
+  term_alt          String?   @db.VarChar(36)
+  permitdo_edit_del Boolean   @default(true)
+  permitido         Boolean   @default(true)
+}
