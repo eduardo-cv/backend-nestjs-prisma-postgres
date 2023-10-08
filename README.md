@@ -28,9 +28,9 @@ prisma introspect
 prisma generate
 
 
-yarn prima migrate dev
+yarn prisma migrate dev
 
 ou
 
-npm run prima migrate dev
+npm run prisma migrate dev
 
